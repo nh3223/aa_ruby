@@ -21,5 +21,15 @@ class Array
         selected
     
     end
+    
+    def my_reject(&prc)
+
+        # Take a block as an argument and return a new array excluding elements that satisfy the block.
+
+        rejected = []
+        self.my_each { |e| rejected << e unless prc.call(e) }
+        rejected
+    
+    end
 
 end
