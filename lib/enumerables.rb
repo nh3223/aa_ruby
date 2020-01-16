@@ -49,5 +49,14 @@ class Array
         true
     
     end 
-
+    
+    def my_flatten
+    
+        #    Return all elements of the array into a new, one-dimensional array. Hint: use recursion!
+        
+        flattened = []
+        self.my_each { |e| if e.is_a?(Array) then flattened += e.my_flatten else flattened << e end }
+        flattened
+    
+    end
 end
