@@ -31,5 +31,15 @@ class Array
         rejected
     
     end
+    
+    def my_any?(&prc)
+
+        # Take a block as an argument and return true if any elements of the array satisfies the block.
+
+        self.my_each { |e| return true if prc.call(e) }
+        false
+
+    end
+
 
 end
