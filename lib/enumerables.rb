@@ -91,4 +91,22 @@ class Array
         rotated
 
     end
+    
+    def my_join(separator = '')
+        
+        # Returns a single string containing all the elements of the array,
+        # separated by the given string separator.
+        # If no separator is given, an empty string is used.
+
+        puts 'method called'
+        new_string = ''
+        self.length.times do |i| 
+            new_string += self[i]
+            new_string += separator unless i == self.length - 1
+        end
+        new_string
+    
+    end
+
+
 end
