@@ -40,3 +40,4 @@ def subwords(word, dictionary)
     initial_result.select { |e| dictionary.include?(e) }
 end
 
+
