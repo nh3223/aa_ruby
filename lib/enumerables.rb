@@ -108,5 +108,18 @@ class Array
     
     end
 
+    def my_reverse
+
+        # Returns a new array containing all the elements of the original array in reverse order.
+
+        reversed = []
+        self.length.times do |i| 
+            old_position = self.length - i - 1
+            reversed << self[old_position]
+        end
+        reversed
+        
+    end
+
 
 end
