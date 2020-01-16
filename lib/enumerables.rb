@@ -11,4 +11,15 @@ class Array
 
     end
 
+    def my_select(&prc)
+
+        # Takes a block as an argument and returns a new array containing only elements that satisfy the block.        
+        # Use your my_each method!
+        
+        selected = []
+        self.my_each { |e| selected << e if prc.call(e) }
+        selected
+    
+    end
+
 end
