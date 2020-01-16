@@ -76,5 +76,19 @@ class Array
         zipped_array            
 
     end
+    
+    def my_rotate(n = 1) 
+        
+        # Returns a new array containing all the elements of the original array in a rotated order.
+        # By default, the array should rotate by one element.
+        # If a negative value is given, the array is rotated in the opposite direction.
 
+        rotated = []
+        self.length.times do |i|
+            old_position = (i + n) % self.length
+            rotated[i] = self[old_position]
+        end
+        rotated
+
+    end
 end
