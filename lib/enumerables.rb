@@ -40,6 +40,14 @@ class Array
         false
 
     end
+    
+    def my_all?(&prc)
 
+        # Take a block as an argument and return true only if all elements satisfy the block.
+
+        self.my_each { |e| return false unless prc.call(e) }
+        true
+    
+    end 
 
 end
