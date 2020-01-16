@@ -59,4 +59,22 @@ class Array
         flattened
     
     end
+
+    def my_zip(*args)
+
+        # Takes any number of arguments
+        # It should return a new array containing self.length elements.
+        # Each element of the new array should be an array with a length of the input arguments + 1
+        # and contain the merged elements at that index.
+        # If the size of any argument is less than self, nil is returned for that location.
+        zipped_array = []
+        self.length.times do |i|
+            sub_array = [self[i]]
+            args.my_each { |arg_e| sub_array << arg_e[i] }
+            zipped_array << sub_array
+        end
+        zipped_array            
+
+    end
+
 end
