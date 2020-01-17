@@ -43,6 +43,3 @@ while play
 end
 puts 'Goodbye!'
 
-
-
-
